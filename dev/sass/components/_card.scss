@@ -1,0 +1,23 @@
+.card {
+    width: 300px;
+    margin: 1.5rem;
+    padding: 1rem;
+
+    &.success {
+        border: 5px solid $success-color;
+        border-radius: 10px;
+    }
+
+    &.danger {
+        border: 5px solid $danger-color;
+        border-radius: 10px;
+    }
+
+    .card__title {
+        margin-bottom: 1rem;
+    }
+
+    .card__content {
+        margin: 1rem 0;
+    } 
+}

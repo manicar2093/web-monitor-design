@@ -1,0 +1,59 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/style.css")
+        title Monitor Web
+    body
+        .hero 
+            .hero__title
+                h1 Monitor Web 
+            .hero__content
+                p Registra. Asigna. Descansa :D
+
+        .options.options--trans_50
+            .options__img 
+                img(src="https://picsum.photos/75")
+            .options__list
+                a.options__item(href="#") Registrar Web
+                a.options__item(href="#") 
+                a.options__item(href="") 
+
+        .container
+            each n in [1,2,3,4,5]
+                .column
+                    .card.success
+                        .card__title 
+                            h2.text_center Web Name asfdasdf aasdfasdfas
+                        .card__img 
+                            img.img--center(src="https://picsum.photos/150")
+                        .card__content.text_center
+                            p.small http://www.anurl.com
+                            .buttons
+                                button.button.button--primary Validar
+                                button.button.button--info Visitar
+                                button.button.button--danger Eliminar
+            each n in [1,2,3,4,5]
+                .column
+                    .card.danger
+                        .card__title 
+                            h2.text_center Web Name
+                        .card__img 
+                            img.img_fluid(src="https://picsum.photos/150")
+                        .card__content.text_center
+                            p.small http://www.anurl.com
+                            .buttons
+                                button.button.button--primary Validar
+                                button.button.button--info Visitar
+                                button.button.button--danger Eliminar
+
+        footer.footer 
+            .container
+                .column--is_6 
+                    p.text_center Creado por: 
+                        span.bold Manuel Carbajal
+                .column--is_6 
+                    img.img_fluid(src="https://picsum.photos/300", alt="logo")
+

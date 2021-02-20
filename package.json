@@ -1,0 +1,19 @@
+{
+  "name": "web-monitor-design",
+  "version": "0.0.1",
+  "description": "Design for web-monitor app",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "node-sass dev/sass/main.scss dist/css/style.css -w",
+    "sass:prod": "node-sass --output-style compressed dev/sass/main.scss dist/css/style.comp.css",
+    "pug:watch": "pug -w ./dev -o ./dist -P"
+  },
+  "author": "Manuel Carbajal",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "bulma": "^0.9.2"
+  }
+}
