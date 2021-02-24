@@ -1,7 +1,13 @@
 html {
     box-sizing: border-box;
+    background-color: $primary-color-dark;
 }
 
-body {
+*, *:before, *:after {
     box-sizing: inherit;
+}
+
+
+p {
+    margin: 1rem 0;
 }

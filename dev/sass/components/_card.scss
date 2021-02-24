@@ -2,15 +2,25 @@
     width: 300px;
     margin: 1.5rem;
     padding: 1rem;
+    transition: all $transition-time ease-in;
 
     &.success {
-        border: 5px solid $success-color;
+        border-bottom: 5px solid $success-color;
         border-radius: 10px;
+
+        &:hover {
+            box-shadow: -1px 5px 24px 9px $success-color;
+        }
     }
 
     &.danger {
-        border: 5px solid $danger-color;
+        border-bottom: 5px solid $danger-color;
         border-radius: 10px;
+
+        &:hover {
+            box-shadow: -1px 5px 24px 9px $danger-color;
+        }
+
     }
 
     .card__title {
@@ -19,5 +29,13 @@
 
     .card__content {
         margin: 1rem 0;
-    } 
+    }
+    .card__img {
+        img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            
+        }
+    }
 }
