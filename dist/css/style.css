@@ -69,6 +69,14 @@ html {
 p {
   margin: 1rem 0; }
 
+@keyframes blowing {
+  0% {
+    box-shadow: -1px 5px 24px 9px rgba(189, 60, 57, 0); }
+  50% {
+    box-shadow: -1px 5px 33px 20px #bd3c39; }
+  100% {
+    box-shadow: -1px 5px 24px 9px rgba(189, 60, 57, 0); } }
+
 .hero {
   width: 100%;
   padding: 5rem;
@@ -82,7 +90,7 @@ p {
   width: 300px;
   margin: 1.5rem;
   padding: 1rem;
-  transition: all 100ms ease-in; }
+  transition: all 100ms ease-in-out; }
   .card.success {
     border-bottom: 5px solid #4CAF50;
     border-radius: 10px; }
@@ -90,9 +98,11 @@ p {
       box-shadow: -1px 5px 24px 9px #4CAF50; }
   .card.danger {
     border-bottom: 5px solid #BD3C39;
-    border-radius: 10px; }
-    .card.danger:hover {
-      box-shadow: -1px 5px 24px 9px #BD3C39; }
+    border-radius: 10px;
+    animation-name: blowing;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse; }
   .card .card__title {
     margin-bottom: 1rem; }
   .card .card__content {
@@ -101,6 +111,31 @@ p {
     display: block;
     margin: 0 auto;
     border-radius: 10px; }
+
+.buttons {
+  margin-top: .1rem;
+  width: 100%; }
+  .buttons .button {
+    padding: .7rem .3rem;
+    margin: 0 .1rem;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: -1px 10px 19px -4px #212121; }
+    .buttons .button:active {
+      transform: translateY(4px); }
+    .buttons .button--primary {
+      border: 2px solid #FFC107;
+      background-color: #FFC107; }
+    .buttons .button--info {
+      border: 2px solid #4CAF50;
+      background-color: #4CAF50; }
+    .buttons .button--danger {
+      border: 2px solid #BD3C39;
+      background-color: #BD3C39; }
 
 .options {
   position: fixed;

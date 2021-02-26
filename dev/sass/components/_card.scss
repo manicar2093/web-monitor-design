@@ -2,7 +2,7 @@
     width: 300px;
     margin: 1.5rem;
     padding: 1rem;
-    transition: all $transition-time ease-in;
+    transition: all $transition-time ease-in-out;
 
     &.success {
         border-bottom: 5px solid $success-color;
@@ -16,10 +16,10 @@
     &.danger {
         border-bottom: 5px solid $danger-color;
         border-radius: 10px;
-
-        &:hover {
-            box-shadow: -1px 5px 24px 9px $danger-color;
-        }
+        animation-name: blowing;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
 
     }
 
