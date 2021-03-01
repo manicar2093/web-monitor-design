@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/style.css")
+        title Opciones | Monitor Web
+    body
+
+        .hero 
+            .hero__title
+                h1 Registra una página
+            .hero__content
+                p Estas son las páginas que estaremos revisando para ver que esten disponibles
+        .container
+            form#fraseForm
+                .form_control 
+                    label(for="frase")
+                        h2(class="text_center") URL
+                    input(name="frase" id="frase" type="text")
+                .buttons
+                    button.button.button--primary Registrar
+                    button.button.button--danger(type="reset") Limpiar
+
+            div.registrados 
+                h1 Páginas Registradas 
+                ul 
+                    li frase
+                    li frase
+                    li frase
+                    li frase
+                    li frase
+
+
+        footer.footer 
+            p.text_center Creado por: 
+                span.bold GD4U

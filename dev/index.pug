@@ -13,13 +13,6 @@ html
             .hero__content
                 p Registra. Espera. Descansa :D
 
-        .options.options--trans_50
-            .options__img 
-                img(src="https://picsum.photos/75")
-            .options__list
-                a.options__item(href="#") Registrar Web
-                a.options__item(href="#") Registrar frase
-
         .container
             each n in [1,2,3,4,5]
                 .column
@@ -48,11 +41,8 @@ html
                                 button.button.button--info Visitar
                                 //button.button.button--danger Eliminar
 
-        footer.footer 
-            .container
-                .column--is_6 
-                    p.text_center Creado por: 
-                        span.bold Manuel Carbajal
-                .column--is_6 
-                    img.img_fluid(src="https://picsum.photos/300", alt="logo")
+        script(src="js/options.js") 
 
+        footer.footer 
+            p.text_center Creado por: 
+                span.bold GD4U
