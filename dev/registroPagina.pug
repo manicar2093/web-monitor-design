@@ -14,14 +14,15 @@ html
             .hero__content
                 p Estas son las páginas que estaremos revisando para ver que esten disponibles
         .container
-            form#fraseForm
-                .form_control 
-                    label(for="frase")
-                        h2(class="text_center") URL
-                    input(name="frase" id="frase" type="text")
-                .buttons
-                    button.button.button--primary Registrar
-                    button.button.button--danger(type="reset") Limpiar
+            div.form
+                form#fraseForm
+                    .form_control 
+                        label(for="frase")
+                            h2(class="text_center") URL
+                        input(name="frase" id="frase" type="text")
+                    .buttons
+                        button.button.button--primary Registrar
+                        button.button.button--danger(type="reset") Limpiar
 
             div.registrados 
                 h1 Páginas Registradas 

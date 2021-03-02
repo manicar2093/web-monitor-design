@@ -14,16 +14,17 @@ html
             .hero__content
                 p Estas frases las mostraremos aleatoriamente cuando una de las paginas no responda correctamente.
         .container
-            form#fraseForm
-                .form_control 
-                    label(for="frase")
-                        h2(class="text_center") Frase
-                    textarea(name="frase" id="frase" cols="40" rows="3")
-                .buttons
-                    button.button.button--primary Registrar
-                    button.button.button--danger(type="reset") Limpiar
+            div.form
+                form#fraseForm
+                    .form_control 
+                        label(for="frase")
+                            h2(class="text_center") Frase
+                        textarea(name="frase" id="frase" cols="40" rows="3")
+                    .buttons
+                        button.button.button--primary Registrar
+                        button.button.button--danger(type="reset") Limpiar
 
-            div.registrados 
+            .registrados 
                 h1 Frases Registradas 
                 ul 
                     li frase

@@ -141,6 +141,13 @@ p {
   margin-top: 1rem;
   background-color: #607D8B; }
 
+.registrados {
+  margin: 1rem auto; }
+  .registrados h1 {
+    margin-bottom: 1rem; }
+  .registrados ul li {
+    margin-bottom: 1rem; }
+
 .container {
   width: 90vw;
   margin: 0 auto;
@@ -148,4 +155,5 @@ p {
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
