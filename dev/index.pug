@@ -13,7 +13,7 @@ html
             .hero__content
                 p Registra. Espera. Descansa :D
 
-        .container
+        .container#pages
             each n in [1,2,3,4,5]
                 .column
                     .card.success
@@ -25,7 +25,6 @@ html
                             .buttons
                                 button.button.button--primary Actualizar
                                 button.button.button--info Visitar
-                                //button.button.button--danger Eliminar
             each n in [1,2,3,4,5]
                 .column
                     .card.danger
@@ -37,7 +36,6 @@ html
                             .buttons
                                 button.button.button--primary Actualizar
                                 button.button.button--info Visitar
-                                //button.button.button--danger Eliminar
         footer.footer 
             p.text_center Creado por: 
                 span.bold GD4U
