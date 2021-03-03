@@ -18,15 +18,21 @@
     </div>
     <div class="container">
       <div class="form">
-        <form id="fraseForm">
+        <form id="pageForm">
+          <div class="form_control"> 
+            <label for="frase">
+              <h2 class="text_center">Nombre </h2>
+            </label>
+            <input name="frase" id="nombre" type="text">
+          </div>
           <div class="form_control"> 
             <label for="frase">
               <h2 class="text_center">URL</h2>
             </label>
-            <input name="frase" id="frase" type="text">
+            <input name="frase" id="url" type="url">
           </div>
           <div class="buttons">
-            <button class="button button--primary">Registrar</button>
+            <button class="button button--primary" type="submit">Registrar</button>
             <button class="button button--danger" type="reset">Limpiar</button>
           </div>
         </form>

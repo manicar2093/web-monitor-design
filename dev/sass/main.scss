@@ -1,6 +1,7 @@
 //@import "../../node_modules/bulma/bulma";
-@import "base/reset";
 @import "abstract/variables";
+@import "abstract/mixins";
+@import "base/reset";
 @import "base/utilities";
 @import "base/typography";
 @import "base/base";
@@ -10,5 +11,6 @@
 @import "components/buttons";
 @import "components/footer";
 @import "components/registrados";
+@import "components/forms";
 @import "layout/images";
 @import "layout/grid";

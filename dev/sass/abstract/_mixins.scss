@@ -1,0 +1,6 @@
+@mixin input-base {
+    font-family: inherit;
+    border-radius: 50px;
+    border-color: $divider-color;
+    padding: 1rem;
+}

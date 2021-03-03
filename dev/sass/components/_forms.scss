@@ -1,0 +1,22 @@
+.form {
+    margin: 1rem auto;
+    width: 25%;
+    text-align: center;
+
+    .form_control {
+        margin: 1rem 0;
+    }
+
+}
+
+input {
+    width: auto;
+    height: 2rem;
+    @include input-base;
+}
+
+textarea {
+    resize: none;
+    border-inline: 5px;
+    @include input-base;
+}

@@ -14,17 +14,21 @@ html
             .hero__content
                 p Estas son las páginas que estaremos revisando para ver que esten disponibles
         .container
-            div.form
-                form#fraseForm
+            .form
+                form#pageForm
+                    .form_control 
+                        label(for="frase")
+                            h2(class="text_center") Nombre 
+                        input(name="frase" id="nombre" type="text")
                     .form_control 
                         label(for="frase")
                             h2(class="text_center") URL
-                        input(name="frase" id="frase" type="text")
+                        input(name="frase" id="url" type="url")
                     .buttons
-                        button.button.button--primary Registrar
+                        button.button.button--primary(type="submit") Registrar
                         button.button.button--danger(type="reset") Limpiar
 
-            div.registrados 
+            .registrados 
                 h1 Páginas Registradas 
                 ul 
                     li frase
