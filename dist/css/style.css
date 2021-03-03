@@ -154,6 +154,8 @@ p {
   text-align: center; }
   .form .form_control {
     margin: 1rem 0; }
+    .form .form_control label h2 {
+      margin: .5rem; }
 
 input {
   width: auto;
