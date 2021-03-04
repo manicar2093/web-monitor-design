@@ -16,6 +16,7 @@ html
         .container
             .form
                 form#pageForm
+                    input(hidden name="id" id="id")
                     .form_control 
                         label(for="nombre")
                             h2(class="text_center") Nombre 
@@ -29,13 +30,12 @@ html
                         button.button.button--danger(type="reset") Limpiar
 
             .registrados 
-                h1 Páginas Registradas 
-                ul 
-                    li Pagina 
-                    li Pagina 
-                    li Pagina 
-                    li Pagina 
-                    li Pagina 
+                h1 Frases Registradas 
+                .registry 
+                    p.text_center.italic Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, odio repellat! 
+                    .buttons
+                        button.button.button--primary Actualizar
+                        button.button.button--danger Eliminar
 
 
         footer.footer 
