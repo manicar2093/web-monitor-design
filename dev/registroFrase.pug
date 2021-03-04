@@ -16,6 +16,7 @@ html
         .container
             .form
                 form#fraseForm
+                    input(hidden name="id" id="id")
                     .form_control 
                         label(for="frase")
                             h2(class="text_center") Frase
@@ -26,14 +27,11 @@ html
 
             .registrados 
                 h1 Frases Registradas 
-                ul 
-                    li frase
-                    li frase
-                    li frase
-                    li frase
-                    li frase
-
-
+                .registry 
+                    p.text_center.italic Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, odio repellat! 
+                    .buttons
+                        button.button.button--primary Actualizar
+                        button.button.button--danger Eliminar
         footer.footer 
             p.text_center Creado por: 
                 span.bold GD4U
