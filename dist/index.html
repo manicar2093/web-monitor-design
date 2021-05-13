@@ -1,165 +1,198 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Monitor Web</title>
+    <title>Web Monitor</title>
   </head>
   <body>
-    <div class="hero"> 
-      <div class="hero__title">
-        <h1>Monitor Web </h1>
-      </div>
-      <div class="hero__content">
-        <p>Registra. Espera. Descansa :D</p>
+    <div class="modal" id="page_registry">
+      <div class="modal_background"></div>
+      <div class="modal_content">
+        <div class="hero">
+          <h2 class="title">Registra una página</h2>
+          <p class="subtitle">Dinos que página quieres que revisemos</p>
+        </div>
+        <form class="form" action="#">
+          <div class="form_control">
+            <label for="page_name">Nombre</label>
+            <input id="page_name" type="text">
+          </div>
+          <div class="form_control">
+            <label for="page_url">URL</label>
+            <input id="page_name" type="url">
+          </div>
+          <div class="buttons">
+            <button class="button--primary">Guardar</button>
+            <button class="button--warn">Limpiar</button>
+            <button class="button--danger">Cancelar</button>
+          </div>
+        </form>
       </div>
     </div>
-    <div class="container" id="pages">
-      <div class="column">
-        <div class="card success">
-          <div class="card__title"> 
-            <h2 class="text_center">Web Name</h2>
-          </div>
-          <div class="card__img"> <img src="https://picsum.photos/150"></div>
-          <div class="card__content text_center">
-            <div class="buttons">
-              <button class="button button--primary">Actualizar</button>
-              <button class="button button--info">Visitar</button>
-            </div>
-          </div>
+    <div class="modal" id="phrase_registry">
+      <div class="modal_background"></div>
+      <div class="modal_content">
+        <div class="hero">
+          <h2 class="title">Registra una frase</h2>
+          <p class="subtitle">Las frases apareceran aleatoriamente cuando una pagina este fuera de lineaz</p>
         </div>
-      </div>
-      <div class="column">
-        <div class="card success">
-          <div class="card__title"> 
-            <h2 class="text_center">Web Name</h2>
+        <form class="form" action="#">
+          <div class="form_control">
+            <label for="page_url">Frase</label>
+            <input id="page_name" type="url">
           </div>
-          <div class="card__img"> <img src="https://picsum.photos/150"></div>
-          <div class="card__content text_center">
-            <div class="buttons">
-              <button class="button button--primary">Actualizar</button>
-              <button class="button button--info">Visitar</button>
-            </div>
+          <div class="buttons">
+            <button class="button--primary">Guardar</button>
+            <button class="button--warn">Limpiar</button>
+            <button class="button--danger">Cancelar</button>
           </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card success">
-          <div class="card__title"> 
-            <h2 class="text_center">Web Name</h2>
-          </div>
-          <div class="card__img"> <img src="https://picsum.photos/150"></div>
-          <div class="card__content text_center">
-            <div class="buttons">
-              <button class="button button--primary">Actualizar</button>
-              <button class="button button--info">Visitar</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card success">
-          <div class="card__title"> 
-            <h2 class="text_center">Web Name</h2>
-          </div>
-          <div class="card__img"> <img src="https://picsum.photos/150"></div>
-          <div class="card__content text_center">
-            <div class="buttons">
-              <button class="button button--primary">Actualizar</button>
-              <button class="button button--info">Visitar</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card success">
-          <div class="card__title"> 
-            <h2 class="text_center">Web Name</h2>
-          </div>
-          <div class="card__img"> <img src="https://picsum.photos/150"></div>
-          <div class="card__content text_center">
-            <div class="buttons">
-              <button class="button button--primary">Actualizar</button>
-              <button class="button button--info">Visitar</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card danger">
-          <div class="card__title"> 
-            <h2 class="text_center">Web Name</h2>
-          </div>
-          <div class="card__img"> <img src="https://picsum.photos/150"></div>
-          <div class="card__content text_center">
-            <div class="buttons">
-              <button class="button button--primary">Actualizar</button>
-              <button class="button button--info">Visitar</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card danger">
-          <div class="card__title"> 
-            <h2 class="text_center">Web Name</h2>
-          </div>
-          <div class="card__img"> <img src="https://picsum.photos/150"></div>
-          <div class="card__content text_center">
-            <div class="buttons">
-              <button class="button button--primary">Actualizar</button>
-              <button class="button button--info">Visitar</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card danger">
-          <div class="card__title"> 
-            <h2 class="text_center">Web Name</h2>
-          </div>
-          <div class="card__img"> <img src="https://picsum.photos/150"></div>
-          <div class="card__content text_center">
-            <div class="buttons">
-              <button class="button button--primary">Actualizar</button>
-              <button class="button button--info">Visitar</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card danger">
-          <div class="card__title"> 
-            <h2 class="text_center">Web Name</h2>
-          </div>
-          <div class="card__img"> <img src="https://picsum.photos/150"></div>
-          <div class="card__content text_center">
-            <div class="buttons">
-              <button class="button button--primary">Actualizar</button>
-              <button class="button button--info">Visitar</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card danger">
-          <div class="card__title"> 
-            <h2 class="text_center">Web Name</h2>
-          </div>
-          <div class="card__img"> <img src="https://picsum.photos/150"></div>
-          <div class="card__content text_center">
-            <div class="buttons">
-              <button class="button button--primary">Actualizar</button>
-              <button class="button button--info">Visitar</button>
-            </div>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
-    <footer class="footer"> 
-      <p class="text_center">Creado por: <span class="bold">GD4U</span></p>
-    </footer>
+    <nav class="navbar">
+      <div class="container">
+        <div class="brand"> <a href="#"><img src="https://picsum.photos/100/100"></a></div>
+        <div class="menu dropdown" data-target="acciones">Acciones
+          <ul class="dropdown_menu" id="acciones">
+            <li class="menu_item">Registrar Página</li>
+            <li class="menu_item">Registrar Frase</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container container--main">
+      <div class="hero">
+        <h1 class="title">Web Monitor</h1>
+        <p class="subtitle">Atento a cuando internet se cae.</p>
+      </div>
+      <div class="content--grid">
+        <div class="card">
+          <div class="card_title">Nombre de la pagina</div>
+          <div class="card_body">
+            <div class="status--up">UP</div>
+          </div>
+          <div class="card_footer">
+            <div class="buttons">
+              <button class="button--warn">Actualizar</button>
+              <button class="button--info">Visitar</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card_title">Nombre de la pagina</div>
+          <div class="card_body">
+            <div class="status--down">DOWN</div>
+          </div>
+          <div class="card_footer">
+            <div class="buttons">
+              <button class="button--warn">Actualizar</button>
+              <button class="button--info">Visitar</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card_title">Nombre de la pagina</div>
+          <div class="card_body">
+            <div class="status--up">UP</div>
+          </div>
+          <div class="card_footer">
+            <div class="buttons">
+              <button class="button--warn">Actualizar</button>
+              <button class="button--info">Visitar</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card_title">Nombre de la pagina</div>
+          <div class="card_body">
+            <div class="status--down">DOWN</div>
+          </div>
+          <div class="card_footer">
+            <div class="buttons">
+              <button class="button--warn">Actualizar</button>
+              <button class="button--info">Visitar</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card_title">Nombre de la pagina</div>
+          <div class="card_body">
+            <div class="status--up">UP</div>
+          </div>
+          <div class="card_footer">
+            <div class="buttons">
+              <button class="button--warn">Actualizar</button>
+              <button class="button--info">Visitar</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card_title">Nombre de la pagina</div>
+          <div class="card_body">
+            <div class="status--down">DOWN</div>
+          </div>
+          <div class="card_footer">
+            <div class="buttons">
+              <button class="button--warn">Actualizar</button>
+              <button class="button--info">Visitar</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card_title">Nombre de la pagina</div>
+          <div class="card_body">
+            <div class="status--up">UP</div>
+          </div>
+          <div class="card_footer">
+            <div class="buttons">
+              <button class="button--warn">Actualizar</button>
+              <button class="button--info">Visitar</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card_title">Nombre de la pagina</div>
+          <div class="card_body">
+            <div class="status--down">DOWN</div>
+          </div>
+          <div class="card_footer">
+            <div class="buttons">
+              <button class="button--warn">Actualizar</button>
+              <button class="button--info">Visitar</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card_title">Nombre de la pagina</div>
+          <div class="card_body">
+            <div class="status--up">UP</div>
+          </div>
+          <div class="card_footer">
+            <div class="buttons">
+              <button class="button--warn">Actualizar</button>
+              <button class="button--info">Visitar</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card_title">Nombre de la pagina</div>
+          <div class="card_body">
+            <div class="status--down">DOWN</div>
+          </div>
+          <div class="card_footer">
+            <div class="buttons">
+              <button class="button--warn">Actualizar</button>
+              <button class="button--info">Visitar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer footer--center">
+        <p class="subtitle">Created by <span class="bold">@manicar2093</span></p>
+      </div>
+    </div>
   </body>
 </html>

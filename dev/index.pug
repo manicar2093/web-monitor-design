@@ -1,41 +1,77 @@
 doctype html
-html
+html(lang="en")
     head
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="css/style.css")
-        title Monitor Web
+        title Web Monitor
     body
-        .hero 
-            .hero__title
-                h1 Monitor Web 
-            .hero__content
-                p Registra. Espera. Descansa :D
+        .modal#page_registry
+            .modal_background
+            .modal_content
+                .hero
+                    h2.title Registra una página
+                    p.subtitle Dinos que página quieres que revisemos
+                form.form(action="#")
+                    .form_control
+                        label(for="page_name") Nombre
+                        input#page_name(type="text")
+                    .form_control
+                        label(for="page_url") URL
+                        input#page_name(type="url")
+                    .buttons
+                        button.button--primary(type=submit) Guardar
+                        button.button--warn(type=reset) Limpiar
+                        button.button--danger Cancelar
 
-        .container#pages
-            each n in [1,2,3,4,5]
-                .column
-                    .card.success
-                        .card__title 
-                            h2.text_center Web Name
-                        .card__img 
-                            img(src="https://picsum.photos/150")
-                        .card__content.text_center
+        .modal#phrase_registry
+            .modal_background
+            .modal_content
+                .hero
+                    h2.title Registra una frase
+                    p.subtitle Las frases apareceran aleatoriamente cuando una pagina este fuera de lineaz
+                form.form(action="#")
+                    .form_control
+                        label(for="page_url") Frase
+                        input#page_name(type="url")
+                    .buttons
+                        button.button--primary(type=submit) Guardar
+                        button.button--warn(type=reset) Limpiar
+                        button.button--danger Cancelar
+
+        nav.navbar
+            .container
+                .brand 
+                    a(href="#")
+                        img(src="https://picsum.photos/100/100")
+                .menu.dropdown(data-target="acciones") Acciones
+                    ul.dropdown_menu#acciones
+                        li.menu_item Registrar Página
+                        li.menu_item Registrar Frase
+        
+        .container.container--main
+            .hero
+                h1.title Web Monitor
+                p.subtitle Atento a cuando internet se cae.
+            .content--grid
+                each v in [1,2,3,4,5]
+                    .card
+                        .card_title Nombre de la pagina
+                        .card_body
+                            .status--up UP
+                        .card_footer
                             .buttons
-                                button.button.button--primary Actualizar
-                                button.button.button--info Visitar
-            each n in [1,2,3,4,5]
-                .column
-                    .card.danger
-                        .card__title 
-                            h2.text_center Web Name
-                        .card__img 
-                            img(src="https://picsum.photos/150")
-                        .card__content.text_center
+                                button.button--warn Actualizar
+                                button.button--info Visitar
+                    .card
+                        .card_title Nombre de la pagina
+                        .card_body
+                            .status--down DOWN
+                        .card_footer
                             .buttons
-                                button.button.button--primary Actualizar
-                                button.button.button--info Visitar
-        footer.footer 
-            p.text_center Creado por: 
-                span.bold GD4U
+                                button.button--warn Actualizar
+                                button.button--info Visitar
+            .footer.footer--center
+                p.subtitle Created by 
+                    span.bold @manicar2093

@@ -1,10 +1,26 @@
 .container {
-    width: 90vw;
+    width: 90%;
     margin: 0 auto;
-    margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    justify-content: center;
-    align-items: center;
+    &--main {
+        display: grid;
+        grid-row: 3;
+        gap: 1rem;
+    }
+}
+
+.content {
+    &--grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        justify-items: center;
+        align-items: center;
+    }
+}
+
+.footer {
+    &--center{
+        display: grid;
+        justify-items: center;
+    }
+    
 }
