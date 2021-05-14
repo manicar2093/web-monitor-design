@@ -4,6 +4,7 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
         link(rel="stylesheet", href="css/style.css")
         title Web Monitor
     body
@@ -40,38 +41,38 @@ html(lang="en")
                         button.button--warn(type=reset) Limpiar
                         button.button--danger Cancelar
 
+        .hero
+            h1.title Web Monitor
+            p.subtitle Atento a cuando internet se cae.
+
         nav.navbar
-            .container
-                .brand 
-                    a(href="#")
-                        img(src="https://picsum.photos/100/100")
-                .menu.dropdown(data-target="acciones") Acciones
-                    ul.dropdown_menu#acciones
-                        li.menu_item Registrar Página
-                        li.menu_item Registrar Frase
+            h2 Opciones
+            .options
+                button.button(title="Agregar Página")
+                    i.fa.fa-globe.button_img
+                    span Agregar Página
+                button.button(title="Agregar Frase")
+                    i.fa.fa-pencil.button_img
+                    span Agregar Frase
+
         
         .container.container--main
-            .hero
-                h1.title Web Monitor
-                p.subtitle Atento a cuando internet se cae.
             .content--grid
-                each v in [1,2,3,4,5]
+                each v in [1,2,3,4,5,6,7,8,9,0]
                     .card
                         .card_title Nombre de la pagina
                         .card_body
-                            .status--up UP
+                            .status.status--up UP
                         .card_footer
-                            .buttons
-                                button.button--warn Actualizar
-                                button.button--info Visitar
+                            button.button.button--warn Actualizar
+                            button.button.button--info Visitar
                     .card
                         .card_title Nombre de la pagina
                         .card_body
-                            .status--down DOWN
+                            .status.status--down DOWN
                         .card_footer
-                            .buttons
-                                button.button--warn Actualizar
-                                button.button--info Visitar
-            .footer.footer--center
-                p.subtitle Created by 
-                    span.bold @manicar2093
+                            button.button.button--warn Actualizar
+                            button.button.button--info Visitar
+        footer.footer.footer--center
+            p.subtitle Created by 
+                span.bold @manicar2093

@@ -1,11 +1,11 @@
 @keyframes blowing {
     0% {
-        box-shadow: -1px 5px 24px 9px rgba($danger-color, 0);
+        opacity: 1;
     }
     50% {
-        box-shadow: -1px 5px 33px 20px rgba($danger-color, 1);
+        opacity: .5;
     }
     100% {
-        box-shadow: -1px 5px 24px 9px rgba($danger-color, 0);
+        opacity: 1;
     }
 }

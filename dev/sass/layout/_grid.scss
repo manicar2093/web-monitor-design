@@ -1,5 +1,5 @@
 .container {
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
     &--main {
         display: grid;
@@ -12,6 +12,7 @@
     &--grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: 2rem;
         justify-items: center;
         align-items: center;
     }

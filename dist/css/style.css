@@ -51,6 +51,16 @@ table {
 .italic {
   font-style: italic; }
 
+.flex-start {
+  justify-content: flex-start;
+  margin-right: auto;
+  display: flex; }
+
+.flex-end {
+  justify-content: flex-end;
+  margin-left: auto;
+  display: flex; }
+
 html {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px; }
@@ -60,6 +70,13 @@ h1 {
 
 h2 {
   font-size: 2rem; }
+
+.title {
+  font-size: 4rem; }
+
+.subtitle {
+  font-style: italic;
+  padding-left: 1rem; }
 
 html {
   box-sizing: border-box; }
@@ -72,14 +89,88 @@ p {
 
 @keyframes blowing {
   0% {
-    box-shadow: -1px 5px 24px 9px rgba(189, 60, 57, 0); }
+    opacity: 1; }
   50% {
-    box-shadow: -1px 5px 33px 20px #bd3c39; }
+    opacity: .5; }
   100% {
-    box-shadow: -1px 5px 24px 9px rgba(189, 60, 57, 0); } }
+    opacity: 1; } }
+
+.hero {
+  padding: 3rem;
+  text-align: center; }
+
+.card {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  transition: all .4s;
+  border-bottom: 5px solid #BDBDBD;
+  border-radius: 10px; }
+  .card_title {
+    font-size: 1.5rem; }
+  .card:hover {
+    box-shadow: -1px 5px 24px 9px #BDBDBD; }
+  .card .status {
+    padding: 1.5rem;
+    margin: .5rem; }
+    .card .status--up {
+      background-color: green;
+      color: white;
+      font-weight: bolder; }
+    .card .status--down {
+      background-color: tomato;
+      color: white;
+      font-weight: bolder;
+      animation-name: blowing;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite; }
+
+.button {
+  display: inline-block;
+  padding: .7rem .3rem;
+  margin: 0 .5rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .15s; }
+  .button:hover {
+    transform: translateY(-3px);
+    box-shadow: -1px 10px 19px -4px #212121; }
+  .button:active {
+    transform: translateY(2px); }
+  .button--warn {
+    border: 2px solid #FFC107;
+    background-color: #FFC107;
+    color: white; }
+  .button--info {
+    border: 2px solid #4CAF50;
+    background-color: #4CAF50;
+    color: white; }
+  .button .button_img {
+    font-size: 2rem; }
+  .button span {
+    padding: 5px; }
+
+.footer {
+  padding: 2rem; }
+
+.navbar {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 3rem; }
+  .navbar h2 {
+    padding: 1rem; }
+  .navbar .options {
+    display: flex;
+    justify-content: center; }
+
+.modal {
+  display: none; }
 
 .container {
-  width: 90%;
+  width: 70%;
   margin: 0 auto; }
   .container--main {
     display: grid;
@@ -89,6 +180,7 @@ p {
 .content--grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
   justify-items: center;
   align-items: center; }
 
