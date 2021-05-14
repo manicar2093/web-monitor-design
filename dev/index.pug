@@ -31,7 +31,7 @@ html(lang="en")
             .modal_content
                 .hero
                     h2.title Registra una frase
-                    p.subtitle Las frases apareceran aleatoriamente cuando una pagina este fuera de lineaz
+                    p.subtitle Las frases apareceran aleatoriamente cuando una pagina este fuera de linea
                 form.form(action="#")
                     .form_control
                         label(for="page_url") Frase
@@ -41,38 +41,68 @@ html(lang="en")
                         button.button--warn(type=reset) Limpiar
                         button.button--danger Cancelar
 
-        .hero
-            h1.title Web Monitor
-            p.subtitle Atento a cuando internet se cae.
+        .hero.is-link 
+            .hero-body
+                h1.title.is-size-1 Web Monitor
+                p.subtitle.is-size-6 Atento a cuando internet se cae.
 
-        nav.navbar
-            h2 Opciones
-            .options
-                button.button(title="Agregar Página")
-                    i.fa.fa-globe.button_img
-                    span Agregar Página
-                button.button(title="Agregar Frase")
-                    i.fa.fa-pencil.button_img
-                    span Agregar Frase
+        .navbar.mb-5
+            .container
+                .navbar-brand
+                    .navbar-burger(role="button" data-target="mainMenu" aria-label="menu" aria-expanded="false")
+                        span(aria-hidden="true")
+                        span(aria-hidden="true")
+                        span(aria-hidden="true")
+                .navbar-menu#mainMenu
+                    .navbar-end
+                        .navbar-item
+                            button.is-medium.button.is-info.is-light(title="Agregar Página")
+                                span.icon
+                                    i.fa.fa-globe
+                                span Administrar Páginas
+                        .navbar-item
+                            button.is-medium.button.is-info.is-light(title="Agregar Frase")
+                                span.icon
+                                    i.fa.fa-pencil
+                                span Administar Frases
+                        .navbar-divider
+                        .navbar-item.is-hidden-desktop
+                            button.is-medium.button.is-success.is-light(title="Agregar Frase")
+                                span.icon
+                                    i.fa.fa-pencil
+                                span Mostrar solo en servicio
+                        .navbar-item.is-hidden-desktop
+                            button.is-medium.button.is-danger.is-light(title="Agregar Frase")
+                                span.icon
+                                    i.fa.fa-pencil
+                                span Mostrar solo fuera de servicio
 
-        
-        .container.container--main
-            .content--grid
-                each v in [1,2,3,4,5,6,7,8,9,0]
-                    .card
-                        .card_title Nombre de la pagina
-                        .card_body
-                            .status.status--up UP
-                        .card_footer
-                            button.button.button--warn Actualizar
-                            button.button.button--info Visitar
-                    .card
-                        .card_title Nombre de la pagina
-                        .card_body
-                            .status.status--down DOWN
-                        .card_footer
-                            button.button.button--warn Actualizar
-                            button.button.button--info Visitar
+        .container
+            .columns.has-text-centered
+                .column
+                    h3.is-size-3 En servicio
+                    .registries
+                        .registry.registry--up
+                            .registry__page_name
+                                a Nombre de la pagina :O
+                .column
+                    h3.is-size-3 Fuera de servicio
+                    .registries
+                        .registry.registry--down
+                            .registry__time
+                                p 00:00:00
+                            .registry__page_name
+                                a Nombre de la pagina :O
+                            .registry__actions
+                                button.button.is-info Actualizar
+                        .registry.registry--recovered
+                            .registry__time
+                                p 00:10:33
+                            .registry__page_name
+                                a Nombre de la pagina :O
+                            .registry__actions
+                                button.button.is-warning Confirmar
+            
         footer.footer.footer--center
             p.subtitle Created by 
                 span.bold @manicar2093
