@@ -1,0 +1,13 @@
+.modal {
+
+    &-content {
+        overflow: hidden;
+
+        width: 40%;
+
+        @include mobile {
+            width: 90%;
+        }
+
+    }
+}

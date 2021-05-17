@@ -8,38 +8,72 @@ html(lang="en")
         link(rel="stylesheet", href="css/style.css")
         title Web Monitor
     body
-        .modal#page_registry
-            .modal_background
-            .modal_content
-                .hero
-                    h2.title Registra una página
-                    p.subtitle Dinos que página quieres que revisemos
-                form.form(action="#")
-                    .form_control
-                        label(for="page_name") Nombre
-                        input#page_name(type="text")
-                    .form_control
-                        label(for="page_url") URL
-                        input#page_name(type="url")
-                    .buttons
-                        button.button--primary(type=submit) Guardar
-                        button.button--warn(type=reset) Limpiar
-                        button.button--danger Cancelar
+        .modal#page_admin
+            .modal-background
+            .modal-content.is-large.card
+                .hero.is-small.is-info
+                    .hero-body
+                        h2.title Registra una página
+                        p.subtitle Dinos que página quieres que revisemos
+                .columns.is-multiline
+                    .column
+                        form.hero(action="#")
+                            .hero-body
+                                .field
+                                    label.label(for="page_name") Nombre
+                                    .control
+                                        input.input#page_name(type="text")
+                                .field
+                                    label.label(for="page_url") URL
+                                    .control
+                                        input.input#page_url(type="url")
+                                .field.is-grouped
+                                    .control
+                                        button.button.is-success(type=submit) Guardar
+                                    .control
+                                        button.button.is-warning(type=reset) Limpiar
+                                    .control
+                                        button.button.is-danger Cancelar
+                    .column
+                        h3.is-size-3.has-text-centered Registrados
+                        .registries
+                            .registry
+                                .registry__page_name
+                                    a Nombre de la pagina :O
+                                .registry__actions
+                                    button.button.is-danger Eliminar
+                                    button.button.is-warning Editar
 
-        .modal#phrase_registry
-            .modal_background
-            .modal_content
-                .hero
-                    h2.title Registra una frase
-                    p.subtitle Las frases apareceran aleatoriamente cuando una pagina este fuera de linea
-                form.form(action="#")
-                    .form_control
-                        label(for="page_url") Frase
-                        input#page_name(type="url")
-                    .buttons
-                        button.button--primary(type=submit) Guardar
-                        button.button--warn(type=reset) Limpiar
-                        button.button--danger Cancelar
+        .modal#phrase_admin
+            .modal-background
+            .modal-content.is-large.card
+                .hero.is-small.is-info
+                    .hero-body
+                        h2.title Registra una frase
+                        p.subtitle ¿Cómo te avisamos que algo sucedió? :O
+                .columns.is-multiline
+                    .column
+                        form.hero(action="#")
+                            .hero-body
+                                .field
+                                    label.label(for="phrase") Frase
+                                    .control
+                                        input.input#phrase(type="text")
+                                .field.is-grouped
+                                    .control
+                                        button.button.is-success(type=submit) Guardar
+                                    .control
+                                        button.button.is-warning(type=reset) Limpiar
+                                    .control
+                                        button.button.is-danger Cancelar
+                    .column
+                        h3.is-size-3.has-text-centered Frases Registradas
+                        .registries
+                            .registry
+                                .registry__page_name Nombre de la pagina :O
+                                .registry__actions
+                                    button.button.is-danger Eliminar
+                                    button.button.is-warning Editar
 
         .hero.is-link 
             .hero-body
@@ -56,12 +90,12 @@ html(lang="en")
                 .navbar-menu#mainMenu
                     .navbar-end
                         .navbar-item
-                            button.is-medium.button.is-info.is-light(title="Agregar Página")
+                            button#fire_page_admin.is-medium.button.is-info.is-light(title="Agregar Página" data-target="page_admin")
                                 span.icon
                                     i.fa.fa-globe
                                 span Administrar Páginas
                         .navbar-item
-                            button.is-medium.button.is-info.is-light(title="Agregar Frase")
+                            button#fire_phrase_admin.is-medium.button.is-info.is-light(title="Agregar Frase" data-target="phrase_admin")
                                 span.icon
                                     i.fa.fa-pencil
                                 span Administar Frases
@@ -81,28 +115,32 @@ html(lang="en")
             .columns.has-text-centered
                 .column
                     h3.is-size-3 En servicio
-                    .registries
-                        .registry.registry--up
-                            .registry__page_name
-                                a Nombre de la pagina :O
+                    .registries.registries--overflowed
+                        each i in [1,2,3,4,5,6,7,8,9,0]
+                            .registry.registry--up
+                                .registry__page_name
+                                    a Nombre de la pagina :O
                 .column
                     h3.is-size-3 Fuera de servicio
-                    .registries
-                        .registry.registry--down
-                            .registry__time
-                                p 00:00:00
-                            .registry__page_name
-                                a Nombre de la pagina :O
-                            .registry__actions
-                                button.button.is-info Actualizar
-                        .registry.registry--recovered
-                            .registry__time
-                                p 00:10:33
-                            .registry__page_name
-                                a Nombre de la pagina :O
-                            .registry__actions
-                                button.button.is-warning Confirmar
+                    .registries.registries--overflowed
+                        each i in [1,2,3,4,5,6,7,8,9,0]
+                            .registry.registry--down
+                                .registry__time
+                                    p 00:00:00
+                                .registry__page_name
+                                    a Nombre de la pagina :O
+                                .registry__actions
+                                    button.button.is-info(title="Revisamos el status de la página") Actualizar
+                            .registry.registry--recovered
+                                .registry__time
+                                    p 00:10:33
+                                .registry__page_name
+                                    a Nombre de la pagina :O
+                                .registry__actions
+                                    button.button.is-warning(title="Pasemos el registro a 'En servicio'") Confirmar
             
         footer.footer.footer--center
             p.subtitle Created by 
                 span.bold @manicar2093
+
+        script(src="./js/script.js")

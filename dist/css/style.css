@@ -7772,9 +7772,19 @@ html {
 .footer {
   padding: 2rem; }
 
+.modal-content {
+  overflow: hidden;
+  width: 40%; }
+  @media screen and (max-width: 768px) {
+    .modal-content {
+      width: 90%; } }
+
 .registries {
   width: 100%;
   margin: 0 auto; }
+  .registries--overflowed {
+    height: 550px;
+    overflow-y: scroll; }
   .registries .registry {
     display: flex;
     flex-direction: row;
@@ -7784,7 +7794,8 @@ html {
     justify-content: center;
     align-items: center;
     margin: .5rem;
-    border-radius: 5px; }
+    border-radius: 5px;
+    height: 60px; }
     .registries .registry .registry__page_name {
       flex-grow: 1; }
     .registries .registry .registry__time, .registries .registry .registry__page_name, .registries .registry .registry__actions {
@@ -7817,3 +7828,7 @@ html {
   @media screen and (max-width: 768px) {
     .footer {
       position: relative; } }
+
+.columns {
+  width: 100%;
+  height: 100%; }
