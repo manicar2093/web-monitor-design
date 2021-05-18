@@ -7774,16 +7774,20 @@ html {
 
 .modal-content {
   overflow: hidden;
-  width: 40%; }
+  width: 60rem; }
   @media screen and (max-width: 768px) {
     .modal-content {
-      width: 90%; } }
+      width: 90%;
+      overflow: scroll; } }
 
 .registries {
   width: 100%;
   margin: 0 auto; }
-  .registries--overflowed {
+  .registries--medium {
     height: 550px;
+    overflow-y: scroll; }
+  .registries--small {
+    height: 225px;
     overflow-y: scroll; }
   .registries .registry {
     display: flex;

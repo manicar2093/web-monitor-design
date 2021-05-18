@@ -36,13 +36,14 @@ html(lang="en")
                                         button.button.is-danger Cancelar
                     .column
                         h3.is-size-3.has-text-centered Registrados
-                        .registries
-                            .registry
-                                .registry__page_name
-                                    a Nombre de la pagina :O
-                                .registry__actions
-                                    button.button.is-danger Eliminar
-                                    button.button.is-warning Editar
+                        .registries.registries--small
+                            each i in [1,2,3,4,5,6,7,8,9,0]
+                                .registry
+                                    .registry__page_name
+                                        a Nombre de la pagina :O
+                                    .registry__actions
+                                        button.button.is-danger Eliminar
+                                        button.button.is-warning Editar
 
         .modal#phrase_admin
             .modal-background
@@ -68,7 +69,7 @@ html(lang="en")
                                         button.button.is-danger Cancelar
                     .column
                         h3.is-size-3.has-text-centered Frases Registradas
-                        .registries
+                        .registries.registries--small
                             .registry
                                 .registry__page_name Nombre de la pagina :O
                                 .registry__actions
@@ -115,14 +116,14 @@ html(lang="en")
             .columns.has-text-centered
                 .column
                     h3.is-size-3 En servicio
-                    .registries.registries--overflowed
+                    .registries.registries--medium
                         each i in [1,2,3,4,5,6,7,8,9,0]
                             .registry.registry--up
                                 .registry__page_name
                                     a Nombre de la pagina :O
                 .column
                     h3.is-size-3 Fuera de servicio
-                    .registries.registries--overflowed
+                    .registries.registries--medium
                         each i in [1,2,3,4,5,6,7,8,9,0]
                             .registry.registry--down
                                 .registry__time

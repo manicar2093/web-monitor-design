@@ -3,10 +3,11 @@
     &-content {
         overflow: hidden;
 
-        width: 40%;
+        width: 60rem;
 
         @include mobile {
             width: 90%;
+            overflow: scroll;
         }
 
     }

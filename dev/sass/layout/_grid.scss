@@ -1,8 +1,13 @@
 .registries {
     width: 100%;
     margin: 0 auto;
-    &--overflowed {
+    &--medium {
         height: 550px;
+        overflow-y: scroll;
+    }
+
+    &--small {
+        height: 225px;
         overflow-y: scroll;
     }
 
