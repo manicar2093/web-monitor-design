@@ -2262,6 +2262,7 @@ a.tag:hover {
     font-size: 1.5rem; }
   .is-fullwidth.input, .is-fullwidth.textarea {
     display: block;
+<<<<<<< HEAD
     width: 100%; }
   .is-inline.input, .is-inline.textarea {
     display: inline;
@@ -2328,6 +2329,24 @@ a.tag:hover {
     border-radius: 290486px;
     padding-left: 1em; }
   .select select {
+=======
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 10px; }
+
+.buttons {
+  margin-top: 1rem;
+  text-align: center; }
+  .buttons .button {
+    display: inline-block;
+    padding: .7rem .3rem;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+>>>>>>> main
     cursor: pointer;
     display: block;
     font-size: 1em;
