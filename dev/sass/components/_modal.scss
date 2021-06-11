@@ -1,0 +1,14 @@
+.modal {
+
+    &-content {
+        overflow: hidden;
+
+        width: 60rem;
+
+        @include mobile {
+            width: 90%;
+            overflow: scroll;
+        }
+
+    }
+}
